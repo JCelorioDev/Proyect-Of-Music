@@ -1,0 +1,193 @@
+body{
+    background-color: rgb(230, 230, 230);
+}
+
+h1{
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    color: chocolate;
+}
+
+.text-center{
+    position: relative;
+    top: 10px;
+}
+
+.badge{
+    margin: 3px 4px;
+}
+
+.texto-secundario{
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    color: rgb(255, 0, 98);
+    position: relative;
+    top: -120px;
+}
+
+
+.Generos{
+    background-color: rgb(250, 214, 214);
+    height: 190px;
+}
+
+.Generos ul li{
+    display: inline-block;
+    margin: 0 10px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.display-4{
+  font-family: 'Bungee', cursive;
+  color: rgb(255, 0, 89);
+}
+
+.display-4::before{
+    content: '\1F52A';
+}
+
+.lead{
+    font-family: 'Hi Melody', cursive;
+    font-weight: 900;
+    color: rgb(134, 123, 128);
+}
+
+.Generos__picture{
+    width: 50px;
+    margin: 5px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    outline: chartreuse solid 2px;
+}
+
+.Generos__picture:hover{
+    transform: scale(120%);
+    -webkit-transform: scale(120%);
+    -moz-transform: scale(120%);
+    -ms-transform: scale(120%);
+    -o-transform: scale(120%);
+    opacity: 80%;
+}
+
+.Formulario{
+    text-align: center;
+}
+
+.btn{
+    margin: 0 5px;
+}
+
+.btn3{
+    margin: 5px 5px;
+}
+
+.Alas{
+    display: inline-block;
+}
+
+.Alas__derecha{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 670px;
+}
+
+.Alas__izquierda{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 290px;
+}
+
+
+.card{
+    position: relative;
+    left: 580px;
+    top: -170px;
+}
+
+.card, h3, p{
+    font-family: 'Hi Melody', cursive;
+    font-weight: 900;
+    color: rgb(153, 255, 0);
+} 
+
+.Form{
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.form2{
+    margin: 4px 0;
+    text-align: center;
+    position:relative;
+    top: -100px;
+}
+
+.form2 h2{
+    font-family: 'Bungee', cursive;
+}
+
+.form2__text{
+    font-family: 'Dongle', sans-serif;
+    color: blue;
+}
+
+.form2 h2::before{
+    content: '\1F320';
+}
+
+.form2 h2::after{
+    content: '\1F320';
+}
+
+.Formulario__text{
+    width: 200px;
+}
+
+.modal{
+    opacity: 80%;
+    background-color: gainsboro;
+    border: chartreuse 2px solid;
+}
+
+.modal-body{
+    position: relative;
+    left: -500px;
+    top: 170px;
+}
+
+.modal-body .card{
+    border: none;
+    margin: 5px 0;
+}
+
+.card-body audio{
+    width: 250px;
+}
+
+footer{
+    background-color: rgb(231, 198, 223);
+    height: 100px;
+}
+
+footer h4{
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16px;
+    position: relative;
+    top: 50px;
+}
+
+footer h4::after{
+    content: '\00A9';
+}

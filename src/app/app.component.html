@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="Generos">
+    <ul>
+      <li *ngFor="let item of Generos"><img class="Generos__picture" src="{{item.picture}}" alt=""> <span>{{item.name}}</span></li>
+    </ul>
+  </div>
+
+
+  <div class="jumbotron">
+    <h1 class="display-4 text-center">Rolitas Asesinas</h1>
+    <p class="lead text-center">Encuentra a tus Mejores Artista solo Aquí =)</p>
+  </div>
+
+  <form action="" class="Formulario">
+    <input type="text" class="Formulario__text" placeholder="Buscar Musicas por Artista" #Buscar value="Bad Bunny">
+    <button type="button" class="btn btn-info" (click)="getMusicForName(Buscar)">Search</button>
+  </form>
+
+
+  <div class="text-center">
+    <span data-bs-toggle="modal" 
+    data-bs-target="#staticBackdrop" (click)="getTrack(item.id)" class="badge text-bg-danger" *ngFor="let item of Album">{{item.title}}</span>
+  </div>
+
+  <br>
+
+  <h1>Información del Artista</h1>
+
+  <div class="Alas">
+    <img src="../assets/Ala Derecha.png" alt="Alas" class="Alas__derecha">
+    <img src="../assets/Ala Izquierda.png" alt="Alas" class="Alas__izquierda">
+  </div>
+
+
+  <div class="card" style="width: 12rem;">
+    <img src="{{Musicas[0].artist.picture}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{Musicas[0].artist.name}} =)</h5>
+      <p class="card-text">ID del Artista: {{Musicas[0].artist.id}}</p>
+      <a href="{{Musicas[0].artist.link}}" target="_blank" class="btn btn-primary">Saber Mas</a>
+    </div>
+  </div>
+
+  <h2 class="texto-secundario">Todas las Musicas</h2>
+
+  <div *ngFor="let item of Musicas" class="form2">
+    <h2>{{item.title}}</h2>
+    <img src="{{item.album.cover}}" alt="">
+    <h3 class="form2__text">Duracion: {{item.duration}}</h3>
+    <h3 class="form2__text">Ranking: {{item.rank}}</h3>
+    <audio src="{{item.preview}}" controls="" name="Musica"></audio>
+    <br><br>
+  </div>
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Lista de Track's</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card" style="width: 18rem;" *ngFor="let item of Tracks">
+           <h1>
+           <p class="card-text">{{ item.title }}</p>
+        </h1>
+            <div class="card-body">
+              <audio controls >
+                <source src="{{ item.preview }}">
+              </audio>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <h4>Todos los Derechos Rerservados - Rolitas Asesinas </h4>
+  </footer>
+</body>
+</html>
